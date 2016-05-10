@@ -6,9 +6,11 @@
 /*   By: knage <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/09 12:23:18 by knage             #+#    #+#             */
-/*   Updated: 2016/05/09 15:11:22 by knage            ###   ########.fr       */
+/*   Updated: 2016/05/10 11:02:12 by knage            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <string.h>
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {

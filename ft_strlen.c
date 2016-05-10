@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knage <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/09 11:52:47 by knage             #+#    #+#             */
-/*   Updated: 2016/05/10 10:02:29 by knage            ###   ########.fr       */
+/*   Created: 2016/05/09 18:51:41 by knage             #+#    #+#             */
+/*   Updated: 2016/05/10 11:52:59 by knage            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_strlen(char *str)
 {
-	char *str;
+	int	i;
 
-	if (n)
-	{
-		str = (char*)s;
-		while (--n)
-		{
-			if (*str++ == c)
-				return ((void *)(str - 1));
-		}
-	}
-	return (NULL);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

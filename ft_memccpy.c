@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knage <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/09 11:52:47 by knage             #+#    #+#             */
-/*   Updated: 2016/05/10 10:02:29 by knage            ###   ########.fr       */
+/*   Created: 2016/05/10 07:58:56 by knage             #+#    #+#             */
+/*   Updated: 2016/05/10 09:06:38 by knage            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 {
-	char *str;
+	int						i;
+	unsigned char			*tmps1;
+	const unsigned char		*tmps2;
 
-	if (n)
+	i = 0;
+	tmps1 = s1;
+	tmps2 = s2;
+	while (n > 0)
 	{
-		str = (char*)s;
-		while (--n)
-		{
-			if (*str++ == c)
-				return ((void *)(str - 1));
-		}
+		tmps1[i] = tmps2[i];
+		if (tmps1[i] == (unsigned char)c)
+			return (s1 + 1 + i);
+		i++;
+		n--;
 	}
 	return (NULL);
 }

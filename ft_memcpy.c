@@ -6,29 +6,24 @@
 /*   By: knage <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/09 17:12:03 by knage             #+#    #+#             */
-/*   Updated: 2016/05/09 18:17:49 by knage            ###   ########.fr       */
+/*   Updated: 2016/05/10 09:17:13 by knage            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <string.h>
 
-void	*ft_memcpy(void *str1, const void *str2, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int		i;
-	int		j;
-	char	*strs[3];
+	size_t	i;
+	char	*strs[2];
 
-	i = -1;
-	j = 0;
-	strs[0] = (char*)malloc(sizeof(str1));
-	strs[1] = str1;
-	strs[2] = (char*)str2;
-	while (strs[1][++i])
-		strs[0][i] = strs[1][i];
-	while (strs[j] != strs[n] && strs[2])
+	i = 0;
+	strs[0] = dst;
+	strs[1] = (char*)src;
+	while (i < n && strs[1])
 	{
-		strs[1][j] = strs[2][j];
-		j++;
+		strs[0][i] = strs[1][i];
+		i++;
 	}
-	return (strs[0]);
+	return (dst);
 }
