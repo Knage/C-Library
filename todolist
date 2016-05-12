@@ -1,0 +1,6 @@
+build ft_strlcat;
+Put in header files
+Redo functions
+test ft_strstr
+count how many functions they are
+stats: 53 headers, 52 files in makefile, 52 .c files, 42 test to do
