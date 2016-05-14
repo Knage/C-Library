@@ -10,9 +10,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i == *s)
 	{
 		if (i == c)
-		{
 			tmp = (char *)s;
-		}
 		s++;
 	}
 	return (tmp);

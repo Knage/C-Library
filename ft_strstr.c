@@ -1,23 +1,26 @@
 #include "libft.h"
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strstr(char *big, char *little)
 {
-	int index;
-	int i;
+	int		cmp;
+	int		cmp2;
 
-	i = 0;
-	index = 0;
-	while (str[index] != '\0')
+	cmp = 0;
+	cmp2 = 0;
+	if (!little[0])
+		return ((char *)(big));
+	while (big[cmp])
 	{
-		while (str[index + i] == to_find[i])
+		if (big[cmp] == little[cmp2])
+			cmp2++;
+		else
 		{
-			i++;
-			if (to_find[i] == '\0')
-			{
-				return (to_find);
-			}
+			cmp -= cmp2;
+			cmp2 = 0;
 		}
-		index++;
+		if (!little[cmp2])
+			return ((char *)(big + cmp - cmp2 + 1));
+		cmp++;
 	}
-	return (0);
+	return (NULL);
 }

@@ -1,5 +1,5 @@
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -9,10 +9,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		str = (char*)s;
 		while (--n)
-		{
 			if (*str++ == c)
 				return ((void *)(str - 1));
-		}
 	}
 	return (NULL);
 }

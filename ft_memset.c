@@ -9,10 +9,7 @@ void	*ft_memset(void *dst, int c, size_t n)
 	if (n)
 	{
 		while (n--)
-		{
 			*d++ = c;
-		}
 	}
-	*d++ = '\0';
 	return (dst);
 }

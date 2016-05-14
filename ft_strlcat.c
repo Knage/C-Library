@@ -1,16 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: kcowle <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/09 11:52:57 by kcowle            #+#    #+#             */
-/*   Updated: 2016/05/10 07:41:36 by kcowle           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 size_t		ft_strlcat(char *dst, const char *src, size_t size)
@@ -38,6 +26,6 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 		}
 		s++;
 	}
-	*d = '\0';
+	*d++ = '\0';
 	return (dlen + (s - src));
 }

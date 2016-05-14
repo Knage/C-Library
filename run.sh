@@ -1,4 +1,4 @@
-RED='\033[0;31m'
+ED='\033[0;31m'
 NC='\033[0m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
@@ -58,7 +58,7 @@ echo "   <Must Have All Of Part 1 And Part 2>"
 
 read answer
 
-if (( "$answer" == "yes") || ( "$answer" == "y" )) then
+if (( "$answer" == "yes")) || (( "$answer" == "y" )); then
 	echo "${RED}*-----------------------------------*"
 	echo "|                                   |"
 	echo "|   ${GREEN}OK, You Asked For it!!${RED}          |"

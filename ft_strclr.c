@@ -3,11 +3,9 @@
 
 void	ft_strclr(char *s)
 {
-	if (s != NULL)
+	if (s)
 	{
-		while (*s != 0)
-		{
+		while (*s)
 			*s++ = '\0';
-		}
 	}
 }
